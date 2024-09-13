@@ -187,7 +187,8 @@ struct TEMP_SpawnSettings
     {
         // Copied from the function photomode uses to spawn 3rd person puppet
         using TFunc = void (*)(const RED4ext::TweakDBID, RED4ext::Handle<RED4ext::IScriptable>&);
-        static GameCall<TFunc> func(CyberEngineTweaks::AddressHashes::CPhotoMode_SetRecordID);
+        //static GameCall<TFunc> func(CyberEngineTweaks::AddressHashes::CPhotoMode_SetRecordID);
+        const RED4ext::RelocPtr<TFunc> func(CyberEngineTweaks::AddressOffsets::CPhotoMode_SetRecordID);
 
         DONOTUSE_recordDBID = acTweakDBID;
         func(acTweakDBID, unkB0);
