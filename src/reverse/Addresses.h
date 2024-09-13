@@ -2,13 +2,6 @@
 
 #include <cstdint>
 
-namespace CyberEngineTweaks::AddressOffsets
-{
-#pragma region CPhotoMode
-constexpr uint32_t CPhotoMode_SetRecordID = 0x004B4BB0;
-#pragma endregion
-}
-
 namespace CyberEngineTweaks::AddressHashes
 {
 #pragma region CBaseInitializationState
@@ -30,9 +23,9 @@ constexpr uint32_t CPatches_Vignette = 1592528795UL;
 constexpr uint32_t CPatches_OptionsInit = 4089777341UL; // Config::IConfigVar::Register
 #pragma endregion
 
-//#pragma region CPhotoMode
-//constexpr uint32_t CPhotoMode_SetRecordID = 4241565651UL; // removed in 2.13?
-//#pragma endregion
+#pragma region CPhotoMode
+constexpr uint32_t CPhotoMode_SetRecordID = 4052428712UL;
+#pragma endregion
 
 #pragma region CRenderGlobal
 constexpr uint32_t CRenderGlobal_InstanceOffset = 1239944840UL;
